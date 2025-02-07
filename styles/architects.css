@@ -54,9 +54,9 @@ main{
  justify-content: space-between;
  align-items: center;
 }
-.nav-links{
+/* .nav-links{
  
-}
+} */
 .brand{
   font-weight: 800;
   font-size: 2.8rem;
@@ -113,18 +113,104 @@ main{
 #of-our{
   color: #FF900E;
 }
+/* fact design section */
+.fact-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+.fact-card{
+  border: 1px solid #FF900E;
+  border-radius: 8px;
+  height: 240px;
+  width: 240px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.26);
+}
+.fact-number{
+  font-weight: 600;
+  font-size: 2.875rem;
+  color: #424242;
+}
+.fact-name{
+  color: #727272;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+/* sponsor's design */
+.sponsors-info{
+  width: 542px;
+  margin: 50px auto;
+  text-align: center;
+}
+/* sponsor company  design*/
+.sponsor-company{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+}
+/* image color change */
+.color-change{
+  filter: grayscale(100%);
+}
+/* feature-section design*/
+#feature-section-title{
+  border-left: 5px solid #FF900E;
+  padding-left: 21px;
+}
+.feature-related-class{
+  display: flex;
+  gap: 140px;
+}
+.card-conatainer{
+  background-color: rgba(0, 0, 0, 0.26);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+.feature-card-title{
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #131313;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.lady-image{
+  width: 100%;
+}
+/* button design */
+#experience-year{
+  font-weight: 700;
+  font-size: 4rem;
+  color: #FFFFFF;
+}
+#experience{
+  margin-left: -92px;
+  margin-top: -100px;
+}
 /* giving media query for small devices*/
 @media screen and (max-width: 576px) {
   .navbar,
   .nav-links,
-  .teams{
+  .teams,
+  .feature-related-class
+  {
     flex-direction: column;
   }
-  .team-image-container{
+  .team-image-container,.fact-container, .sponsor-company{
     grid-template-columns: repeat(1, 1fr);
+  }
+  .fact-container, .sponsor-company{
+    justify-items: center;
+    gap: 24px;
   }
   .our-feautures{
     margin-left: 25px;
+  }
+  #experience{
+    margin-top: 15px;
+    margin-left: 15px;
   }
 }
 /* media query for medium devices */
@@ -134,5 +220,15 @@ main{
   }
   .our-feautures{
     margin: 50px auto;
+  }
+  .sponsor-company{
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    justify-items: center;
+  }
+  .fact-container{
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    justify-items: center;
   }
 }
